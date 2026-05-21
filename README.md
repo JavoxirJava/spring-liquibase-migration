@@ -27,18 +27,10 @@ A reusable agent skill for creating and reviewing production-safe Liquibase migr
 - forgetting master changelog includes
 - destructive changes without warning
 
-## Install on Windows
+## Install
 
-Copy this folder to:
-
-```txt
-C:/Users/<YOUR_NAME>/.codex/skills/spring-liquibase-migration
-```
-
-Expected structure:
-
-```txt
-C:/Users/<YOUR_NAME>/.codex/skills/spring-liquibase-migration/SKILL.md
+```bash
+npx skills add JavoxirJava/spring-liquibase-migration
 ```
 
 ## Use
