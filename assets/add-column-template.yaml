@@ -1,0 +1,21 @@
+databaseChangeLog:
+  - changeSet:
+      id: YYYY-MM-DD-002-add-example-column
+      author: system
+      preConditions:
+        - onFail: MARK_RAN
+        - not:
+            - columnExists:
+                tableName: example
+                columnName: description
+      changes:
+        - addColumn:
+            tableName: example
+            columns:
+              - column:
+                  name: description
+                  type: TEXT
+      rollback:
+        - dropColumn:
+            tableName: example
+            columnName: description

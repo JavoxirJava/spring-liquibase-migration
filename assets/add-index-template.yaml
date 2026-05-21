@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: YYYY-MM-DD-003-add-example-name-index
+      author: system
+      changes:
+        - createIndex:
+            tableName: example
+            indexName: idx_example_name
+            columns:
+              - column:
+                  name: name
+      rollback:
+        - dropIndex:
+            tableName: example
+            indexName: idx_example_name

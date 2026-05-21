@@ -1,0 +1,5 @@
+preConditions:
+  - onFail: MARK_RAN
+  - not:
+      - tableExists:
+          tableName: example
